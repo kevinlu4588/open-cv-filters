@@ -1,4 +1,5 @@
 import cv2
+from filters import apply_sepia, apply_vignette, custom_greyscale, blur5x5, blur5x5_separable
 
 def main():
     # Open the video capture (camera)
@@ -16,7 +17,7 @@ def main():
     cv2.namedWindow("Video", cv2.WINDOW_AUTOSIZE)
 
     # Initialize mode (color by default)
-    is_grayscale = False
+    display_mode = "color"
 
     while True:
         # Capture a frame from the camera
@@ -25,10 +26,17 @@ def main():
             print("Frame capture failed or stream ended.")
             break
 
-        # Convert frame to grayscale if 'g' was pressed
-        if is_grayscale:
+        # Apply transformations based on display mode
+        if display_mode == "sepia":
+            frame = apply_sepia(frame)
+        elif display_mode == "vignette":
+            frame = apply_vignette(apply_sepia(frame))
+        elif display_mode == "gray_scale":
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
+        elif display_mode == "custom_gray_scale":
+            frame = custom_greyscale(frame)
+        elif display_mode == "blur":
+            frame = blur5x5_separable(frame)
         # Display the frame in the window
         cv2.imshow("Video", frame)
 
@@ -38,12 +46,21 @@ def main():
         if key == ord('q'):  # Quit on 'q'
             print("Quitting...")
             break
-        elif key == ord('g'):  # Switch to grayscale on 'g'
-            is_grayscale = True
-            print("Switched to grayscale mode.")
+        elif key == ord('s'):  # Sepia filter on 's'
+            display_mode = "sepia"
+            print("Switched to Sepia mode.")
+        elif key == ord('v'):  # Vignette effect on 'v'
+            display_mode = "vignette"
+            print("Switched to Vignette mode.")
+        elif key == ord('g'):
+            display_mode = "gray_scale"
+        elif key == ord('h'):
+            display_mode = "custom_gray_scale"
+        elif key == ord('b'):
+            display_mode = "blur"
         elif key != 255:  # Switch back to color for any other key (excluding no keypress)
-            is_grayscale = False
-            print("Switched to color mode.")
+            display_mode = "color"
+            print("Switched to Color mode.")
 
     # Release resources
     cap.release()
