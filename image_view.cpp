@@ -3,7 +3,7 @@
 
 int main() {
     // Path to the image
-    std::string image_path = "/Users/KevinLu/open-cv-filters-1/python_version/Screenshot 2025-01-21 at 2.25.18 PM.png"; // Replace with your image path
+    std::string image_path = "/Users/KevinLu/open-cv-filters-1/image.png"; // Replace with your image path
 
     // Load the image
     cv::Mat image = cv::imread(image_path);

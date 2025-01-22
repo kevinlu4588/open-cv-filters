@@ -2,11 +2,20 @@
     "configurations": [
         {
             "name": "Mac",
+            "compilerPath": "/usr/bin/g++",
+            "compilerArgs": ["-std=c++17"],
+            "intelliSenseMode": "macos-clang-x64",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1",
+                "/opt/homebrew/Cellar/opencv/4.11.0"
             ],
-            "defines": [],
-            "macFrameworkPath": []
+            "defines": [
+                "VERSION=1",
+                "DEBUG"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
