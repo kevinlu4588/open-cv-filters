@@ -1,29 +1,29 @@
-import cv2
+import cv2 
 import numpy as np
 
 def custom_greyscale(src):
     """
-    Custom grayscale transformation.
-    This creates an alternative grayscale by using a weighted difference of channels.
-    The result is a unique grayscale version with each channel identical.
-    
+    Custom grayscale transformation using weighted contributions of color channels.
+
     Args:
         src (np.ndarray): The source image in BGR format.
     
     Returns:
-        np.ndarray: The transformed grayscale image.
+        np.ndarray: The transformed grayscale image in 3 channels.
     """
     # Split channels
     b, g, r = cv2.split(src)
     
-    # Create a custom grayscale transformation (e.g., invert the red channel and add blue)
-    custom_gray = 255 - r + 0.5 * b
-    custom_gray = np.clip(custom_gray, 0, 255)  # Ensure pixel values stay in valid range
-    
+    # Calculate grayscale intensities using weighted sum
+    bgr_average = (b * 0.2 + g * 0.5 + r * 0.4)
+
+    gray = np.clip(255 - bgr_average, 0, 255)
+
     # Convert the single-channel grayscale to a 3-channel grayscale image
-    dst = cv2.merge([custom_gray, custom_gray, custom_gray])
+    dst = cv2.merge([gray, gray, gray])
     
-    return dst
+    return dst.astype(np.uint8)
+
 
 
 def apply_sepia(src):

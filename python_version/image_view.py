@@ -2,7 +2,7 @@ import cv2
 
 def main():
     # Read an image file
-    image_path = "/Users/KevinLu/open-cv-filters-1/Screenshot 2025-01-21 at 2.25.18 PM.png"  # Replace with your image file path
+    image_path = "/Users/KevinLu/open-cv-filters-1/python_version/Screenshot 2025-01-21 at 2.25.18 PM.png"  # Replace with your image file path
     image = cv2.imread(image_path)
     
     if image is None:
