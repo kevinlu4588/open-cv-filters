@@ -117,41 +117,105 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named image_view
+# Target rules for targets named vidDisplay
 
 # Build rule for target.
-image_view: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 image_view
-.PHONY : image_view
+vidDisplay: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vidDisplay
+.PHONY : vidDisplay
 
 # fast build rule for target.
-image_view/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/build
-.PHONY : image_view/fast
+vidDisplay/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/build
+.PHONY : vidDisplay/fast
 
-image_view.o: image_view.cpp.o
-.PHONY : image_view.o
+#=============================================================================
+# Target rules for targets named timeBlur
+
+# Build rule for target.
+timeBlur: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 timeBlur
+.PHONY : timeBlur
+
+# fast build rule for target.
+timeBlur/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/build
+.PHONY : timeBlur/fast
+
+filter.o: filter.cpp.o
+.PHONY : filter.o
 
 # target to build an object file
-image_view.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/image_view.cpp.o
-.PHONY : image_view.cpp.o
+filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/filter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/filter.cpp.o
+.PHONY : filter.cpp.o
 
-image_view.i: image_view.cpp.i
-.PHONY : image_view.i
+filter.i: filter.cpp.i
+.PHONY : filter.i
 
 # target to preprocess a source file
-image_view.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/image_view.cpp.i
-.PHONY : image_view.cpp.i
+filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/filter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/filter.cpp.i
+.PHONY : filter.cpp.i
 
-image_view.s: image_view.cpp.s
-.PHONY : image_view.s
+filter.s: filter.cpp.s
+.PHONY : filter.s
 
 # target to generate assembly for a file
-image_view.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/image_view.cpp.s
-.PHONY : image_view.cpp.s
+filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/filter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/filter.cpp.s
+.PHONY : filter.cpp.s
+
+timeBlur.o: timeBlur.cpp.o
+.PHONY : timeBlur.o
+
+# target to build an object file
+timeBlur.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/timeBlur.cpp.o
+.PHONY : timeBlur.cpp.o
+
+timeBlur.i: timeBlur.cpp.i
+.PHONY : timeBlur.i
+
+# target to preprocess a source file
+timeBlur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/timeBlur.cpp.i
+.PHONY : timeBlur.cpp.i
+
+timeBlur.s: timeBlur.cpp.s
+.PHONY : timeBlur.s
+
+# target to generate assembly for a file
+timeBlur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/timeBlur.cpp.s
+.PHONY : timeBlur.cpp.s
+
+vidDisplay.o: vidDisplay.cpp.o
+.PHONY : vidDisplay.o
+
+# target to build an object file
+vidDisplay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/vidDisplay.cpp.o
+.PHONY : vidDisplay.cpp.o
+
+vidDisplay.i: vidDisplay.cpp.i
+.PHONY : vidDisplay.i
+
+# target to preprocess a source file
+vidDisplay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/vidDisplay.cpp.i
+.PHONY : vidDisplay.cpp.i
+
+vidDisplay.s: vidDisplay.cpp.s
+.PHONY : vidDisplay.s
+
+# target to generate assembly for a file
+vidDisplay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/vidDisplay.cpp.s
+.PHONY : vidDisplay.cpp.s
 
 # Help Target
 help:
@@ -161,10 +225,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... image_view"
-	@echo "... image_view.o"
-	@echo "... image_view.i"
-	@echo "... image_view.s"
+	@echo "... timeBlur"
+	@echo "... vidDisplay"
+	@echo "... filter.o"
+	@echo "... filter.i"
+	@echo "... filter.s"
+	@echo "... timeBlur.o"
+	@echo "... timeBlur.i"
+	@echo "... timeBlur.s"
+	@echo "... vidDisplay.o"
+	@echo "... vidDisplay.i"
+	@echo "... vidDisplay.s"
 .PHONY : help
 
 

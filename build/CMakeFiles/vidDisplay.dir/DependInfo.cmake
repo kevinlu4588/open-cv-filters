@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/KevinLu/open-cv-filters-1/image_view.cpp" "CMakeFiles/image_view.dir/image_view.cpp.o" "gcc" "CMakeFiles/image_view.dir/image_view.cpp.o.d"
+  "/Users/KevinLu/open-cv-filters-1/filter.cpp" "CMakeFiles/vidDisplay.dir/filter.cpp.o" "gcc" "CMakeFiles/vidDisplay.dir/filter.cpp.o.d"
+  "/Users/KevinLu/open-cv-filters-1/vidDisplay.cpp" "CMakeFiles/vidDisplay.dir/vidDisplay.cpp.o" "gcc" "CMakeFiles/vidDisplay.dir/vidDisplay.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

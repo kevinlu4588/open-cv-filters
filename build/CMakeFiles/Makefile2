@@ -63,11 +63,13 @@ CMAKE_BINARY_DIR = /Users/KevinLu/open-cv-filters-1/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/image_view.dir/all
+all: CMakeFiles/vidDisplay.dir/all
+all: CMakeFiles/timeBlur.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/image_view.dir/codegen
+codegen: CMakeFiles/vidDisplay.dir/codegen
+codegen: CMakeFiles/timeBlur.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +77,73 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/image_view.dir/clean
+clean: CMakeFiles/vidDisplay.dir/clean
+clean: CMakeFiles/timeBlur.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/image_view.dir
+# Target rules for target CMakeFiles/vidDisplay.dir
 
 # All Build rule for target.
-CMakeFiles/image_view.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/KevinLu/open-cv-filters-1/build/CMakeFiles --progress-num=1,2 "Built target image_view"
-.PHONY : CMakeFiles/image_view.dir/all
+CMakeFiles/vidDisplay.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/KevinLu/open-cv-filters-1/build/CMakeFiles --progress-num=4,5,6 "Built target vidDisplay"
+.PHONY : CMakeFiles/vidDisplay.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/image_view.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KevinLu/open-cv-filters-1/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/image_view.dir/all
+CMakeFiles/vidDisplay.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KevinLu/open-cv-filters-1/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vidDisplay.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KevinLu/open-cv-filters-1/build/CMakeFiles 0
-.PHONY : CMakeFiles/image_view.dir/rule
+.PHONY : CMakeFiles/vidDisplay.dir/rule
 
 # Convenience name for target.
-image_view: CMakeFiles/image_view.dir/rule
-.PHONY : image_view
+vidDisplay: CMakeFiles/vidDisplay.dir/rule
+.PHONY : vidDisplay
 
 # codegen rule for target.
-CMakeFiles/image_view.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/KevinLu/open-cv-filters-1/build/CMakeFiles --progress-num=1,2 "Finished codegen for target image_view"
-.PHONY : CMakeFiles/image_view.dir/codegen
+CMakeFiles/vidDisplay.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/KevinLu/open-cv-filters-1/build/CMakeFiles --progress-num=4,5,6 "Finished codegen for target vidDisplay"
+.PHONY : CMakeFiles/vidDisplay.dir/codegen
 
 # clean rule for target.
-CMakeFiles/image_view.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_view.dir/build.make CMakeFiles/image_view.dir/clean
-.PHONY : CMakeFiles/image_view.dir/clean
+CMakeFiles/vidDisplay.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/clean
+.PHONY : CMakeFiles/vidDisplay.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/timeBlur.dir
+
+# All Build rule for target.
+CMakeFiles/timeBlur.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/KevinLu/open-cv-filters-1/build/CMakeFiles --progress-num=1,2,3 "Built target timeBlur"
+.PHONY : CMakeFiles/timeBlur.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/timeBlur.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KevinLu/open-cv-filters-1/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/timeBlur.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KevinLu/open-cv-filters-1/build/CMakeFiles 0
+.PHONY : CMakeFiles/timeBlur.dir/rule
+
+# Convenience name for target.
+timeBlur: CMakeFiles/timeBlur.dir/rule
+.PHONY : timeBlur
+
+# codegen rule for target.
+CMakeFiles/timeBlur.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/KevinLu/open-cv-filters-1/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target timeBlur"
+.PHONY : CMakeFiles/timeBlur.dir/codegen
+
+# clean rule for target.
+CMakeFiles/timeBlur.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/timeBlur.dir/build.make CMakeFiles/timeBlur.dir/clean
+.PHONY : CMakeFiles/timeBlur.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
